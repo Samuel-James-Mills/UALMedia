@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />-->
+    
+    
+    <link href="css/jquery-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/mdd_styles.css">
+    <link href="css/site.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <header id="header-main">
+        <img src="images/logo-low.png" alt="UAL Logo" />
+        <h1>UAL Media</h1>
+    </header>
+
+    <nav class="white-border-top white-border-bottom">
+        <ul>
+            <li><a href="">PHOTOGRAPHY</a></li>
+            <li><a href="">VIDEO</a></li>
+            <li><a href="">PHOTOSHOP</a></li>
+            <li><a href="">ANIMATION</a></li>
+            <li><a href="">WEB DESIGN</a></li>
+        </ul>
+        <br />
+    </nav>
+  
+
+    
+    
+        <header id="news-header"class="blue-border-bottom news-main-header" >
+            <h1 class="big-header white-font">NEWS <span class="medium-header">CREATE A STORY</span></h1>
+        </header>
+   
+    
+    <div class="mdd_preview"></div>
+    <section id="news-story-lists" class="standard-sans-font">
+        <form id="news-article-editor">
+
+            <header class="news-main-list-header blue-border-bottom"> <h2 class="white-font">STORY EDITOR</h2></header>
+            <div class="news-form-input-container">
+                <label for="news-headline">Article Headline:</label>
+                <input type="text" name="news-headline" id="news-headline" placeholder="Add Headline Here" />
+            </div>
+            <div class="news-form-input-container">
+                <label for="news-main-image">Article Main Image:</label>
+                <input type="file" name="news-main-image" id="news-main-image" placeholder="Click To Add Image" />
+            </div>
+            <div class="news-form-input-container">
+                <label for="article-lead">Article Lead:</label>
+                <textarea name="article-lead" id="article-lead" placeholder="Enter a brief description of the article here."></textarea>
+            </div>
+            <div class="mdd_toolbar"></div>
+            <textarea cols=50 rows=20 class="mdd_editor" data-mdd-preview="#news-body"></textarea>
+            <header class="news-list-archive"><a href="#" class="white-font"><h2> CREATE STORY</h2></a></header>
+        </form>
+    </section>
+    <section id="news" class="inline-block news-main-width">
+
+        <article class="main-news">
+            <header>
+                <h1 class="news-headline"></h1>
+                <h3 class="news-date">11/05/2013</h3>
+            </header>
+            <div class="news-main-image"></div>
+            <div class="article-lead"></div>
+            <br class="clear-row" />
+            <div id="news-body">
+            </div>
+        </article>
+    </section>
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/MarkdownDeepLib.min.js"></script>
+    <script src="Scripts/NewsCreate.js"></script>
+    
+
+   
+</body>
+</html>

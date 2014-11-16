@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Css/site.css" rel="stylesheet" />
+    <style>
+        /* CSS */
+        .hsContainer {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .hsContainer1 {
+            /*display: table;
+            table-layout: fixed;*/
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            background-image: url("Images/High-quality_lens_flare_sat.jpg");
+            opacity: 0.3;
+            top: 0;
+            -moz-transform: scale(1.5 1.5);
+            -ms-transform: scale(1.5 1.5);
+            -o-transform: scale(1.5 1.5);
+            -webkit-transform: scale(1.5 1.5);
+            transform: scale(1.5 1.5);
+        }
+        .hsContainer2 {
+            /*display: table;
+            table-layout: fixed;*/
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            background-image: url("Images/High-quality_lens_flare_sat.jpg");
+            opacity: 0.1;
+            top: 0;
+            -moz-transform: scale(1.5 1.5);
+            -ms-transform: scale(1.5 1.5);
+            -o-transform: scale(1.5 1.5);
+            -webkit-transform: scale(1.5 1.5);
+            transform: scale(1.5 1.5);
+        }
+        .hsContainer3 {
+            /*display: table;
+            table-layout: fixed;*/
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            background-image: url("Images/gallery-bg-test-blue3.png");
+            background-image: url("Images/liver_building_blue_poster_.png");
+            background-position-y:bottom;
+            opacity: 1;
+            top:0;
+        }
+
+
+        .hsContent {
+            max-width: 450px;
+            margin: -150px auto 0 auto;
+            display: table-cell;
+            vertical-align: middle;
+            color: #000000;
+            padding: 0 8%;
+            text-align: center;
+        }
+
+        .bcg {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -moz-background-size:auto;
+            -o-background-size:auto;
+            -webkit-background-size: cover;
+            background-size:auto;
+            height: 100%;
+            width: 100%;
+            position:relative;
+            top:255px;
+            z-index:1;
+            
+        }
+        /* Slide 1 */
+        #slide-1 .bcg {
+            background-image: url("Images/gallery-bg-test-blue3.png");
+            /*background-image: url("Images/gallery-bg-bandw.png");*/
+            /*background-image: url("Images/gallery-bg-blue-tint.png");*/
+        }
+        #slide-1{
+            position:absolute;
+            top:0px;
+        }
+        #gallery{
+           opacity:1;
+        }
+        .header-and-nav-container{
+            position:fixed;
+            width:100%;
+            z-index:10;
+        }
+        #photoshop-gallery-header{
+            position:absolute;
+            top:97px;
+            width:100%;
+            z-index:4;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-and-nav-container">
+        <header id="header-main">
+            <img src="images/logo-low.png" alt="UAL Logo" />
+            <h1>UAL Media</h1>
+        </header>
+
+        <nav class="white-border-top white-border-bottom">
+            <ul>
+                <li><a href="">PHOTOGRAPHY</a></li>
+                <li><a href="">VIDEO</a></li>
+                <li><a href="">PHOTOSHOP</a></li>
+                <li><a href="">ANIMATION</a></li>
+                <li><a href="">WEB DESIGN</a></li>
+            </ul>
+            <br />
+        </nav>
+    </div>
+        <header id="photoshop-gallery-header" class="photoshop-gallery-main-header blue-border-bottom">
+            <h1 class="big-header white-font">PHOTOSHOP <span class="medium-header">GALLERY</span></h1>
+
+        </header>
+    
+    <section id="slide-1" class="homeSlide">
+        <div class="bcg"
+             data-center="background-position: 50% 0px;"
+             data-top-bottom="background-position: 50% -110px;"
+             data-anchor-target="#slide-1">
+            <div class="hsContainer"
+                 >
+                <!--<div class="hsContent"
+             data-center="opacity: 1"
+             data-106-top="opacity: 0"
+             data-anchor-target="#slide-1 h2">-->
+                <!--</div>-->
+                <div class="hsContainer3"
+                     data-center="background-position: 50% -1200px;"
+                     data-top-bottom="background-position: 50% 700px;"
+                     data-anchor-target="#slide-1">
+
+                </div>
+                <div class="hsContainer2"
+                     data-center="background-position: 50% 0px;"
+                     data-top-bottom="background-position: 50% 220px;"
+                     data-anchor-target="#slide-1">
+                    
+                </div>
+                <div class="hsContainer1"
+                     data-center="background-position: 50% 0px;"
+                     data-top-bottom="background-position: 50% 200px;"
+                     data-anchor-target="#slide-1">
+
+                </div>
+                
+                <section id="gallery">
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-item-info white-font">
+                            <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                            <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                        </div>
+                        <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                    </div>
+                </section>
+                <br class="clear-row" />
+                <br />
+                <br />
+
+                <br class="clear-row" />
+            </div>
+            
+        </div>
+    </section>
+    <footer>Test</footer>
+    <script src="Scripts/skrollr.min.js"></script>
+    <script>
+        skrollr.init({
+            smoothScrolling: false,
+            mobileDeceleration: 0.004
+        });
+    </script>
+</body>
+</html>

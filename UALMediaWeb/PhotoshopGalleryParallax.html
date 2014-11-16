@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html class="no-skrollr">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Classic parallax page</title>
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/jquery-slider-styles.css" rel="stylesheet" />
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .skrollr-desktop body {
+            height: 100% !important;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        p {
+            margin: 1em 0;
+        }
+
+        .parallax-image-wrapper {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .parallax-image-wrapper-50 {
+            height: 50%;
+            top: -50%;
+        }
+
+        .parallax-image-wrapper-100 {
+            height: 100%;
+            top: -100%;
+        }
+
+        .parallax-image {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .parallax-image-50 {
+            height: 200%;
+            top: -50%;
+        }
+
+        .parallax-image-100 {
+            height: 100%;
+            top: 0;
+        }
+
+        .parallax-image.skrollable-between {
+            display: block;
+        }
+
+        .no-skrollr .parallax-image-wrapper {
+            display: none !important;
+        }
+
+        #skrollr-body {
+            height: 100%;
+            overflow: visible;
+            position: relative;
+        }
+
+        .gap {
+            background: transparent center no-repeat;
+            background-size: cover;
+        }
+
+        .skrollr .gap {
+            background: transparent !important;
+        }
+
+        .gap-50 {
+            height: 50%;
+        }
+
+        .gap-100 {
+            height: 100%;
+        }
+        .gap-150px{
+            height:150px;
+        }
+
+        .header, .content {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .content-full {
+            height: 100%;
+        }
+
+        #done {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        We position the images fixed and therefore need to place them outside of #skrollr-body.
+        We will then use data-anchor-target to display the correct image matching the current section (.gap element).
+    -->
+
+    <div class="parallax-image-wrapper parallax-image-wrapper-100"
+         data-anchor-target="#dragons + .gap"
+         data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+        <div class="parallax-image parallax-image-100"
+             style="background-image:url(images/photoshop-background.png)"
+             data-anchor-target="#dragons + .gap"
+             data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+             data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
+        <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+    </div>
+
+    <div class="parallax-image-wrapper parallax-image-wrapper-100"
+         data-anchor-target="#bacons + .gap"
+         data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+        <div class="parallax-image parallax-image-100"
+             style="background-image:url(images/gallery-bg-test-blue3.png)"
+             data-anchor-target="#bacons + .gap"
+             data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+             data-top-bottom="transform: translate3d(0px, 80%, 0px);"></div>
+    </div>
+
+    <div class="parallax-image-wrapper parallax-image-wrapper-50"
+         data-anchor-target="#kittens + .gap"
+         data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+         data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+        <div class="parallax-image parallax-image-50"
+             style="background-image:url(images/kitteh3.jpg)"
+             data-anchor-target="#kittens + .gap"
+             data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+             data-top-bottom="transform: translate3d(0px, 60%, 0px);"></div>
+    </div>
+
+    <div id="skrollr-body">
+        <div class="header" id="dragons">
+            <header id="header-main">
+                <img src="images/logo-low.png" alt="UAL Logo" />
+                <h1>UAL Media</h1>
+            </header>
+
+            <nav class="white-border-top white-border-bottom">
+                <ul>
+                    <li><a href="">PHOTOGRAPHY</a></li>
+                    <li><a href="">VIDEO</a></li>
+                    <li><a href="">PHOTOSHOP</a></li>
+                    <li><a href="">ANIMATION</a></li>
+                    <li><a href="">WEB DESIGN</a></li>
+                </ul>
+                <br />
+            </nav>
+
+            
+
+           
+
+        </div>
+        <div class="gap gap-150px" style="background-image:url(images/photoshop-background.png);">
+            
+            <header id="photoshop-gallery-header" class=" blue-border-bottom">
+                <h1 class="big-header white-font">PHOTOSHOP <span class="medium-header">GALLERY</span></h1>
+
+            </header>
+        </div>
+        <div class="content" id="bacons">
+            <section id="gallery">
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-info white-font">
+                        <h1 class="very-small-header">Skateboarder On a ramp</h1>
+                        <span class="blue-font medium-text standard-sans-font">Winston Mandimika</span>
+                    </div>
+                    <img src="Images/tom-site-screen.jpg" alt="Tom Ennis' Skate Site" />
+                </div>
+
+            </section>
+        </div>
+        <div class="gap gap-100" style="background-image:url(images/kitteh2.jpg);"></div>
+        <div class="content content-full" id="kittens">
+            Here be kittens
+        </div>
+        <div class="gap gap-50" style="background-image:url(images/kitteh3.jpg);"></div>
+        <div class="content" id="done">
+            Images from <a href="http://placekitten.com/attribution.html">http://placekitten.com/</a>, thanks!
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="Scripts/site.js"></script>-->
+    <script src="Scripts/skrollr.min.js"></script>
+    <script type="text/javascript">
+        skrollr.init({
+            smoothScrolling: false,
+            mobileDeceleration: 0.004
+        });
+    </script>
+</body>
+
+</html>

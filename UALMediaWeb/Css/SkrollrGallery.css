@@ -1,0 +1,111 @@
+﻿
+/* CSS */
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hsContainer1 {
+    /*display: table;
+            table-layout: fixed;*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-image: url("../Images/High-quality_lens_flare_sat.jpg");
+    opacity: 0.3;
+    top: 0;
+    -moz-transform: scale(1.5 1.5);
+    -ms-transform: scale(1.5 1.5);
+    -o-transform: scale(1.5 1.5);
+    -webkit-transform: scale(1.5 1.5);
+    transform: scale(1.5 1.5);
+}
+
+.hsContainer2 {
+    /*display: table;
+            table-layout: fixed;*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-image: url("../Images/High-quality_lens_flare_sat.jpg");
+    opacity: 0.1;
+    top: 0;
+    -moz-transform: scale(1.5 1.5);
+    -ms-transform: scale(1.5 1.5);
+    -o-transform: scale(1.5 1.5);
+    -webkit-transform: scale(1.5 1.5);
+    transform: scale(1.5 1.5);
+}
+
+.hsContainer3 {
+    /*display: table;
+            table-layout: fixed;*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    background-image: url("../Images/liver_building_blue_poster_.png");
+    background-position-y: bottom;
+    opacity: 1;
+    top: 0;
+}
+
+
+.hsContent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #000000;
+    padding: 0 8%;
+    text-align: center;
+}
+
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    -webkit-background-size: cover;
+    background-size: auto;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 255px;
+    z-index: 1;
+}
+/* Slide 1 */
+#slide-1 .bcg {
+    /*background-image: url("../Images/gallery-bg-test-blue3.png");*/
+    /*background-image: url("Images/gallery-bg-bandw.png");*/
+    /*background-image: url("Images/gallery-bg-blue-tint.png");*/
+}
+
+#slide-1 {
+    position: absolute;
+    top: 0px;
+}
+
+#gallery {
+    opacity: 1;
+}
+
+.header-and-nav-container {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+#photoshop-gallery-header {
+    position: absolute;
+    top: 97px;
+    width: 100%;
+    z-index: 4;
+}

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/css/jquery-slider-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/mdd_styles.css">
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="header-main">
+        <img src="~/images/logo-low.png" alt="UAL Logo" />
+        <h1>UAL Media</h1>
+    </header>
+
+    <nav class="white-border-top white-border-bottom">
+        <ul>
+            <li><a href="">PHOTOGRAPHY</a></li>
+            <li><a href="">VIDEO</a></li>
+            <li><a href="">PHOTOSHOP</a></li>
+            <li><a href="">ANIMATION</a></li>
+            <li><a href="">WEB DESIGN</a></li>
+        </ul>
+        <br />
+    </nav>
+                @*@Html.Partial("_LoginPartial")*@         
+    <div class="main-content">
+        @RenderBody()
+    </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/MarkdownDeepLib.min.js"></script>
+    <script src="~/Scripts/NewsCreate.js"></script>
+    <script src="~/Scripts/site.js"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")" type="text/javascript"></script>
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)*@
+</body>
+</html>

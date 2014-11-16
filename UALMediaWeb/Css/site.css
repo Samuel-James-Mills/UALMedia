@@ -1,0 +1,687 @@
+﻿/* Font declarations*/
+
+@font-face {
+    font-family: 'soviet_styleregular';
+    src: url('../fonts/soviet_style-webfont.eot');
+    src: url('../fonts/soviet_style-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/soviet_style-webfont.woff') format('woff'), url('../fonts/soviet_style-webfont.ttf') format('truetype'), url('../fonts/soviet_style-webfont.svg#soviet_styleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*======================================================================================================*/
+
+/*  
+	CSS Reset by Eric Meyer - Released under Public Domain
+    http://meyerweb.com/eric/tools/css/reset/
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, header, section, aside, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+body {
+    line-height: 1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+:focus {
+    outline: 0;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset End======================================================================*/
+
+body {
+}
+
+.clear-row {
+    clear: both;
+}
+
+/*Global Start*/
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.1;
+    font-family: inherit;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.big-header {
+    font-size: 120pt;
+}
+
+.medium-header {
+    font-size: 85pt;
+}
+
+.very-small-header {
+    font-size: 28pt;
+}
+.large-text {
+    font-size:14pt;
+}
+.medium-text {
+    font-size: 12pt;
+}
+
+.small-text {
+    font-size: 10pt;
+}
+
+.red-background {
+    background-color: rgb(114,2,12);
+}
+
+.blue-background {
+    background-color: rgb(0,153,204);
+}
+
+.black-font {
+    color: rgb(0,0,0);
+}
+
+.red-font {
+    color: rgb(114,2,12);
+}
+
+.white-font {
+    color: rgb(255, 255, 255);
+}
+
+.blue-font {
+    color: rgb(0,153,204);
+}
+
+.standard-sans-font {
+    font-family: 'Franklin Gothic','Arial Black', Gadget, sans-serif;
+}
+
+.white-border-top {
+    border-top: solid 5px rgb(255, 255, 255);
+}
+
+.white-border-bottom {
+    border-bottom: solid 5px rgb(255, 255, 255);
+}
+
+.red-border {
+    border: solid 2px rgb(114,2,12);
+}
+
+.red-border-top {
+    border-top: solid 5px rgb(114,2,12);
+}
+
+.red-border-bottom {
+    border-bottom: solid 5px rgb(114,2,12);
+}
+
+.light-red-border-top {
+    border-top: solid 5px rgb(160, 2, 12);
+}
+
+.light-red-border-bottom {
+    border-bottom: solid 5px rgb(160,2,12);
+}
+
+.blue-border {
+    border: solid 2px rgb(0,153,204);
+}
+
+.blue-border-top {
+    border-top: solid 5px rgb(0,153,204);
+}
+
+.blue-border-bottom {
+    border-bottom: solid 5px rgb(0,153,204);
+}
+
+.column-third {
+    width: 33.333%;
+}
+
+.column-quarter {
+    width: 25%;
+}
+
+.column-fifth {
+    width: 20%;
+}
+
+.in-article-link {
+    font-family: 'Franklin Gothic','Arial Black', Gadget, sans-serif;
+}
+/*Global End*/
+
+/*Header start=====================================================================*/
+header h1 {
+    font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 4px;
+    font-size: 40pt;
+}
+
+header h2 {
+    font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#header-main {
+    background-color: rgb(114,2,12);
+}
+
+    #header-main img {
+        display: inline-block;
+        margin-right: 6px;
+        margin-left: 10px;
+        width: 35px;
+        vertical-align: middle;
+    }
+
+    #header-main h1 {
+        color: rgb(255, 255, 255);
+    }
+/*header end========================================================================*/
+/*nav start=========================================================================*/
+nav {
+    margin: 0;
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
+    height: auto;
+    padding: 5px;
+    background-color: rgb(0,153,204);
+}
+
+    nav ul {
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+        nav ul li {
+            display: inline-block;
+            width: 20%;
+            text-align: center;
+            float: left;
+        }
+
+        nav ul a {
+            color: rgb(255, 255, 255);
+            font-family: 'Franklin Gothic','Arial Black', Gadget, sans-serif;
+        }
+/*nav end==============================================================================*/
+/*news start===========================================================================*/
+.news-date {
+    font-family: 'Franklin Gothic','Arial Black', Gadget, sans-serif;
+}
+
+#news {
+}
+
+#news-header h1 {
+    margin-left: 50px;
+}
+
+#news-header {
+}
+
+#news .news-date {
+    /*color: rgb(114,2,12);*/
+    padding-bottom: 1%;
+    margin-bottom: 2%;
+    border-bottom: solid 2px rgb(0,153,204);
+}
+
+#news article {
+    color: rgb(0,0,0);
+    display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%;
+    float: left;
+    margin-bottom: 2%;
+    box-sizing: border-box;
+}
+
+    #news article img {
+        display: inline-block;
+        width: 50%;
+        margin-left: 2%;
+        margin-right: 2%;
+        float: right;
+    }
+
+    #news article p {
+        display: inline;
+    }
+/*news main start=============================================*/
+.news-main-header {
+    background: url(../Images/news-background.png) fixed;
+    background-position-y: top;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+.news-main-list-header {
+    font-size: 50pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+    .news-main-list-header h2 {
+        font-size: 60pt;
+        padding-top: 0;
+        padding-left: 2%;
+        line-height: 0.85;
+    }
+
+#news-story-lists {
+    background: rgb(114,2,12);
+    display: inline-block;
+    width: 40%;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid 10px rgb(0,153,204);
+    border-radius: 20px;
+}
+
+.news-list-item {
+    padding-bottom: 5px;
+    border-bottom: solid 3px rgb(160, 2, 12);
+    margin-bottom: 5px;
+}
+
+#news-story-lists .news-list-item {
+    display: inline-block;
+    width: 45%;
+    margin-right: 4%;
+}
+
+
+    #news-story-lists .news-list-item h2 {
+        font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 20pt;
+    }
+
+#news-story-lists .news-date {
+    color: rgb(0,153,204);
+    font-size: 11pt;
+}
+
+#news .main-news img {
+    width: 94%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#news .main-news p {
+    display: block;
+}
+
+.news-main-width {
+    width: 49%;
+    margin: 1%;
+}
+
+
+/*news main end=============================================*/
+/*news archive start*/
+.news-list-archive {
+    margin-top: 20px;
+}
+
+    .news-list-archive h2 {
+        font-size: 40pt;
+        border-bottom: solid 4px rgb(255, 255, 255);
+        line-height: 0.7;
+    }
+
+.archive-article h1 {
+    font-size: 20pt;
+}
+/*news archive end*/
+/*news create start*/
+#news-body {
+    display: inline-block;
+    width: 100%;
+    margin: 1%;
+}
+
+    #news-body h1 {
+        font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+        margin-top: 4px;
+        font-size: 40pt;
+    }
+
+    #news-body h2 {
+        font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+        margin-top: 4px;
+        font-size: 30pt;
+    }
+
+    #news-body h3 {
+        font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+        margin-top: 4px;
+        font-size: 20pt;
+    }
+
+.news-form-input-container {
+    padding-bottom: 8%;
+    color: rgb(255, 255, 255);
+}
+
+    .news-form-input-container label {
+        width: 40%;
+        float: left;
+        display: inline-block;
+    }
+
+    .news-form-input-container input {
+        width: 50%;
+        float: right;
+        display: inline-block;
+    }
+
+    .news-form-input-container textarea {
+        width: 100%;
+        float: left;
+    }
+
+
+/*news create end*/
+/*news end====================================================================*/
+/*gallery start===============================================================*/
+
+#gallery {
+    padding: 4%;
+    /*background-color: rgba(114,2,12,0.1);*/
+    /*background-color:rgba(0,153,204,0.4);*/
+}
+
+.gallery-container {
+    height: 100%;
+    /*background-image: url(../Images/gallery-bg-test.png);*/
+    background: url(../Images/gallery-bg-test-blue3.png) fixed;
+    /*background-position-y:top;*/
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+#gallery > div {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /*padding:2%;*/
+    /*background-color: rgb(114,2,12);
+
+border-radius: 20px;*/
+    border: solid 1px rgb(9, 20, 25);
+    width: 22%;
+    float: left;
+    box-shadow: 4px 4px 5px rgba(9, 20, 25,0.8);
+}
+
+#gallery div img {
+    width: 100%;
+   
+}
+
+#gallery .gallery-item-info {
+    box-sizing: border-box;
+    /*font-family:'Franklin Gothic','Arial Black', Gadget, sans-serif;*/
+    font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    z-index: 2;
+    top: 30%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10px;
+    background-color: rgba(114, 2, 12, 1);
+}
+/*photography gallery start=============*/
+.photography-gallery-main-header {
+    background: url(../Images/photography-background.png) fixed;
+    background-position-y: top;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+/*photography gallery end===============*/
+/*photoshop gallery start=============*/
+.photoshop-gallery-main-header {
+    background: url(../Images/photoshop-background.png) fixed;
+    background-position-y: top;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+/*photoshop gallery end===============*/
+/*gallery end=================================================================*/
+
+
+
+
+.media-item {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    width: 18%;
+    display: inline-block;
+    float: left;
+}
+
+    .media-item img {
+        width: 100%;
+    }
+
+
+
+
+
+
+/* Bootstrap 3 carousel style overwrites start*/
+.carousel-inner {
+    background-color: rgb(114,2,12);
+    border-bottom: inset 5px rgb(0,153,204);
+}
+
+.carousel-caption {
+    width:100%;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: static;
+    height: 130px;
+    border-top: solid 5px rgb(255,255,255);
+    
+    
+}
+
+    .carousel-caption > div {
+        width:84%;
+        position: absolute;
+        margin-left: 8%;
+        margin-right: 8%;
+        
+        height:100%;
+
+    }
+
+.carousel-inner h3 {
+    display: inline-block;
+    font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+    font-size: 20pt;
+    color: rgb(255, 255, 255);
+    vertical-align: middle;
+}
+
+.carousel-inner p {
+    display: inline-block;
+    font-family: 'Franklin Gothic','Arial Black', Gadget, sans-serif;
+    font-size: 30pt;
+    color: rgb(255, 255, 255);
+    vertical-align: middle;
+    margin-top: 1%;
+}
+
+.carousel-caption p {
+    display: none;
+}
+
+.carousel-indicators {
+    bottom: 5%;
+}
+
+
+.carousel-control {
+    top: 15px;
+    width: 8%;
+}
+
+@media screen and (min-width: 800px) {
+    .carousel-caption {
+        display: inline-block;
+        width: 40%;
+        position:relative;
+       border:0;
+    }
+
+    .carousel-caption div{
+         border: 0;
+         margin-right: 17%;
+         width:75%;
+    }
+    .carousel-inner {
+        border-bottom: inset 4px rgb(0,153,204);
+    }
+
+        .carousel-inner > .item img {
+            display: inline-block;
+            width: 60%;
+            float: left;
+            border-right: inset 2px rgb(30, 2, 12);
+        }
+
+    div.carousel-caption {
+        width: 40%;
+        float: right;
+        height: 100%;
+    }
+
+    .carousel-caption p {
+        display: block;
+    }
+
+    .carousel-inner h3 {
+        font-size: 50pt;
+    }
+
+    .carousel-inner p {
+        font-size: 15pt;
+    }
+}
+    /* Bootstrap 3 carousel style overwrites end*/
+
+    #main header img {
+        width: 55px;
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    #main header h1 {
+        display: inline-block;
+        font-family: 'soviet_styleregular','Arial Black', Gadget, sans-serif;
+        font-size: 60pt;
+        color: rgb(255, 255, 255);
+        vertical-align: middle;
+        margin-top: 7px;
+    }
+
+    #tabs {
+        border: solid 2px rgb(114,2,12);
+    }
+}

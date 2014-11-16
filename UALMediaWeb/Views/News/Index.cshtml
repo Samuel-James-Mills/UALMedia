@@ -1,0 +1,88 @@
+﻿@model IEnumerable<News>
+@{
+    ViewBag.Title = "Index";
+}
+<header id="news-header" class="blue-border-bottom news-main-header">
+    <h1 class="big-header white-font">NEWS</h1>
+</header>
+<section id="news-story-lists">
+
+    <header class="news-main-list-header blue-border-bottom"> <h2 class="white-font">LATEST</h2></header>
+    <ul class="news-list news-list-latest">
+
+        @foreach (var news in Model)
+        {
+
+            <li class="news-list-item">
+                <a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#news" href="@Url.Action("GetArticleById", "News", new { id = news.Id })">
+                    <h2>@news.Headline</h2>
+                </a>
+                <a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#news" href="@Url.Action("GetArticleById", "News", new { id = news.Id })">
+                    <span class="news-date">@news.DateCreated.ToShortDateString()</span>
+                </a>
+            </li>
+        }
+    </ul>
+    <header class="news-main-list-header blue-border-bottom "> <h2 class="white-font">MOST POPULAR</h2></header>
+    <ul class="news-list news-list-top">
+        <li class="news-list-item">
+            <a href="">
+                <h2>YEAR 10 ENTERTAINMENT AND SPORTS WEBSITES NOW ONLINE</h2>
+            </a>
+
+            <a href="">
+                <span class="news-date">11/05/2013</span>
+            </a>
+        </li>
+        <li class="news-list-item">
+            <a href="">
+                <h2>YEAR 10 ENTERTAINMENT AND SPORTS WEBSITES NOW ONLINE</h2>
+            </a>
+
+            <a href="">
+                <span class="news-date">11/05/2013</span>
+            </a>
+        </li>
+        <li class="news-list-item">
+            <a href="">
+                <h2>YEAR 10 ENTERTAINMENT AND SPORTS WEBSITES NOW ONLINE</h2>
+            </a>
+
+            <a href="">
+                <span class="news-date">11/05/2013</span>
+            </a>
+        </li>
+        <li class="news-list-item">
+            <a href="">
+                <h2>YEAR 10 ENTERTAINMENT AND SPORTS WEBSITES NOW ONLINE</h2>
+            </a>
+
+            <a href="">
+                <span class="news-date">11/05/2013</span>
+            </a>
+        </li>
+        <li class="news-list-item">
+            <a href="">
+                <h2>YEAR 10 ENTERTAINMENT AND SPORTS WEBSITES NOW ONLINE</h2>
+            </a>
+
+            <a href="">
+                <span class="news-date">11/05/2013</span>
+            </a>
+        </li>
+        <li class="news-list-item">
+            <a href="">
+                <h2>YEAR 10 ENTERTAINMENT AND SPORTS WEBSITES NOW ONLINE</h2>
+            </a>
+
+            <a href="">
+                <span class="news-date">11/05/2013</span>
+            </a>
+        </li>
+    </ul>
+
+    <header class="news-list-archive"><a href="#" class="white-font"><h2> NEWS ARCHIVE</h2></a></header>
+</section>
+<section id="news" class="inline-block news-main-width">
+    @Html.Action("GetArticleById")
+</section>

@@ -1,0 +1,17 @@
+﻿@model Domain.Entities.News
+
+
+    <article class="main-news">
+        <header>
+
+            <h1>@Model.Headline</h1>
+            <h3 class="red-font standard-sans-font large-text">@Model.Lead</h3>
+            <h3 class="news-date blue-font large-text">@Model.DateCreated.ToShortDateString()</h3>
+        </header>
+        <img class="red-border" src="@Model.ImageSrc" alt="@Model.Headline" />
+        @Html.Action("GetNewsBody", new { id = @Model.Id })
+
+    </article>
+
+    <br class="clear-row" />
+
