@@ -267,7 +267,7 @@ namespace Domain.Migrations
                     Resource = "SkaterGlowingLines.jpg",
                     Type = 2,
                     DateCreated = DateTime.Now.Subtract(TimeSpan.FromDays(81))
-                },
+                }
                 
             };
             foreach (Media content in contents)

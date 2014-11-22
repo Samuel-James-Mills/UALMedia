@@ -124,7 +124,7 @@
       <Project>{4fbe60d3-5107-486b-ac7c-97220fe1642d}</Project>
       <Name>Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UALMedia\UALMediaWeb.csproj">
+    <ProjectReference Include="..\UALMediaWeb\UALMediaWeb.csproj">
       <Project>{55DE5DB4-1D05-45DE-8EDE-14CEF8C5B282}</Project>
       <Name>UALMediaWeb</Name>
     </ProjectReference>

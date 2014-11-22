@@ -27,7 +27,7 @@ namespace UALMedia.Tests.ControllerTests
         public void Index_OnIsAjaxRequest_ReturnsAPartialViewResult()
         {
             GalleryController galleryController = arrangeOnIsAjaxRequestGalleryController();
-           
+
             var viewResult = galleryController.Index();
 
             Assert.NotNull(viewResult);
@@ -35,19 +35,19 @@ namespace UALMedia.Tests.ControllerTests
         }
 
         [Test]
-        public void Index_OnIsAjaxRequest_ReturnsAPagedListOfMediaItemsInTheViewModel()
+        public void Index_OnIsAjaxRequest_ReturnsAPagedListOfMediaItemsInThePartialViewModel()
         {
             GalleryController galleryController = arrangeOnIsAjaxRequestGalleryController();
-            
+
             var viewResult = galleryController.Index() as PartialViewResult;
 
             var model = (IEnumerable<Media>)viewResult.Model;
 
             Assert.NotNull(viewResult);
             Assert.AreEqual(1, model.ElementAt(0).Id);
-            Assert.AreEqual(2, model.Count());
+            Assert.AreEqual(12, model.Count());
         }
-        
+
         [Test]
         public void Index_OnNonAjaxRequest_ReturnsAViewResult()
         {
@@ -57,6 +57,44 @@ namespace UALMedia.Tests.ControllerTests
 
             Assert.NotNull(viewResult);
             Assert.IsInstanceOf<ViewResult>(viewResult);
+        }
+
+        [Test]
+        public void Index_OnNonAjaxRequest_ReturnsAPagedListOfMediaItemsInTheViewModel()
+        {
+            GalleryController galleryController = arrangeOnNonAjaxRequestGalleryController();
+
+            var viewResult = galleryController.Index() as ViewResult;
+
+            var model = (IEnumerable<Media>)viewResult.Model;
+
+            Assert.NotNull(viewResult);
+            Assert.AreEqual(1, model.ElementAt(0).Id);
+            Assert.AreEqual(12, model.Count());
+        }
+        [Test]
+        public void Index_OnNonAjaxRequestForPhotographyCategory_ReturnsAPagedListOfPhotographyCategoryMediaItems()
+        {
+            GalleryController galleryController = arrangeOnNonAjaxRequestGalleryController();
+
+            var viewResult = galleryController.Index(mediaType: 1) as ViewResult;
+
+            var model = (IEnumerable<Media>)viewResult.Model;
+            Assert.NotNull(viewResult);
+            Assert.AreEqual(12, model.Where(x => x.Type == 1).Count());
+            Assert.AreEqual(0, model.Where(x => x.Type == 2).Count());
+        }
+        [Test]
+        public void Index_OnIsAjaxRequestForPhotographyCategory_ReturnsAPagedListOfPhotographyCategoryMediaItems()
+        {
+            GalleryController galleryController = arrangeOnIsAjaxRequestGalleryController();
+
+            var viewResult = galleryController.Index(mediaType: 1) as PartialViewResult;
+
+            var model = (IEnumerable<Media>)viewResult.Model;
+            Assert.NotNull(viewResult);
+            Assert.AreEqual(12, model.Where(x => x.Type == 1).Count());
+            Assert.AreEqual(0, model.Where(x => x.Type == 2).Count());
         }
 
         private GalleryController arrangeOnIsAjaxRequestGalleryController()
@@ -113,7 +151,143 @@ namespace UALMedia.Tests.ControllerTests
                     Resource = "LiverpoolMuseum1.jpg",
                     Type = 1,
                     DateCreated = DateTime.Parse("02/02/02")
+                    },
+                    new Media
+                    {
+                    Id = 3,
+                    Name = "Liverpool Museum Photo",
+                    Description = "A picture of Liverpool Museum, on a trip for the year 11 photography module",
+                    Resource = "LiverpoolMuseum2.jpg",
+                    Type = 1,
+                    DateCreated = DateTime.Parse("03/03/03")
+                    },
+                     new Media
+                     {
+                        Id = 4,
+                        Name = "Liverpool Museum Photo",
+                        Description = "A picture of Liverpool Museum, on a trip for the year 11 photography module",
+                        Resource = "LiverpoolMuseum3.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("04/04/04")
+                    },
+                     new Media
+                     {
+                        Id = 5,
+                        Name = "Liverbuilding Photo",
+                        Description = "A picture of the Liverbuilding , on a trip for the year 11 photography module",
+                        Resource = "Liverbuilding1.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("05/05/05")
+                    },
+                     new Media
+                     {
+                        Id = 6,
+                        Name = "Liverpool Museum Photo",
+                        Description = "A picture of an Liverpool Museum, on a trip for the year 11 photography module",
+                        Resource = "LiverpoolMuseum4.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("06/06/06")
+                    },
+                     new Media
+                     {
+                        Id = 7,
+                        Name = "Chimp photo at Chester Zoo",
+                        Description = "A picture of a monkey at Chester Zoo, on a trip for the year 11 photography module",
+                        Resource = "MonkeyPhoto1.jpg",
+                        Type = 2,
+                        DateCreated = DateTime.Parse("07/07/07")
+                    },
+                     new Media
+                     {
+                        Id = 8,
+                        Name = "Rhino photo at Chester Zoo",
+                        Description = "A picture of a Rhino at Chester Zoo, on a trip for the year 11 photography module",
+                        Resource = "Rhino1.jpg",
+                        Type = 2,
+                        DateCreated = DateTime.Parse("08/08/08")
+                    },
+                     new Media
+                     {
+                        Id = 9,
+                        Name = " Photo of fish at Chester Zoo",
+                        Description = "A picture of Fish at Chester Zoo, on a trip for the year 11 photography module",
+                        Resource = "Fish1.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("09/09/09")
+                    },
+                     new Media
+                     {
+                        Id = 10,
+                        Name = "Museum of Liverpool Photo",
+                        Description = "A picture of an the Museum of Liverpool, on a trip for the year 11 photography module",
+                        Resource = "MuseumofLiverpool1.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("10/10/10")
+                    },
+                    new Media
+                    {
+                        Id = 11,
+                        Name = "Museum of Liverpool Photo",
+                        Description = "A picture of an Liverpool Museum, on a trip for the year 11 photography module",
+                        Resource = "MuseumofLiverpool2.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("11/11/11")
+                    },
+                    new Media
+                    {
+                        Id = 12,
+                        Name = "Spider at Chester Zoo",
+                        Description = "A picture of a Spider at Chester Zoo, on a trip for the year 9 photography module",
+                        Resource = "Spider1.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("12/12/12")
+                    },
+                    new Media
+                    {
+                        Id = 13,
+                        Name = "Museum of Liverpool",
+                        Description = "A picture of an Liverpool Museum, on a trip for the year 11 photography module",
+                        Resource = "MuseumofLiverpool3.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("13/3/13")
+                    },
+                    new Media
+                    {
+                        Id = 14,
+                        Name = "Liverpool Waterfront",
+                        Description = "A picture of the Liverpool Waterfront, on a trip for the year 11 photography module",
+                        Resource = "LiverpoolWaterfront1.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("14/4/14")
+                    },
+                     new Media
+                     {
+                        Id = 15,
+                        Name = "Liverpool Docks",
+                        Description = "A picture of the Liverpool Docks, on a trip for the year 11 photography module",
+                        Resource = "LiverpoolDocks1.jpg",
+                        Type = 1,
+                        DateCreated = DateTime.Parse("15/5/15")
+                    },
+                    new Media
+                    {
+                        Id = 16,
+                        Name = "A Rhino With Plastic Wrap",
+                        Description = "A picture of the a rhino with a plastic wrap filter, created by a year 10 pupil",
+                        Resource = "RhinoPlasticWrap.jpg",
+                        Type = 2,
+                        DateCreated = DateTime.Parse("16/6/16")
+                    },
+                    new Media
+                    {
+                        Id = 17,
+                        Name = "A Skateboarder with glowing lines filter",
+                        Description = "A picture of the a skateboarder with a glowing lines filter, created by a year 10 pupil",
+                        Resource = "SkaterGlowingLines.jpg",
+                        Type = 2,
+                        DateCreated = DateTime.Parse("17/7/17")
                     }
+
                 };
             return mediaItems;
         }
